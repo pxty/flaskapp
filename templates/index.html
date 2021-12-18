@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+  <head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <title>{% block title %}{% endblock %} - My Webpage</title>
+  </head>
+  <body>
+  <div class="main">
+  <div class="wrap" id="content">
+      {% block content %}
+
+          <form action = "/" method = "POST">
+              <h2>My file storage</h2>
+              <p>username: <input type = 'text' name = 'k1'/></p>
+              <p>password: <input type = 'text' name = 'k2'/></p>
+              <p><input class="btn" type = 'submit' value = 'sign in'/></p>
+          </form>
+
+      {% endblock %}
+  </div>
+  <div class="wrap" id="footer">
+      {% block footer %}
+
+      {% endblock %}
+  </div>
+  </div>
+  </body>
+</html>

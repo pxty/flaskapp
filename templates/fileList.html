@@ -1,0 +1,30 @@
+{% extends '__autoindex__/autoindex.html' %}
+
+{% block meta %}
+  {{ super() }}
+  <link rel="stylesheet"
+    href="{{ url_for('static', filename='css/style.css') }}" />
+    <!-- Here you can specify your own .css -->
+{% endblock %}
+
+{% block header %}
+<div class="filelist">
+  <div style="text-align: justify;">
+    <div class="element">{{username}}</div>
+    <div class="element">
+      <form action="/upload" method=post enctype=multipart/form-data>
+        <input class="upload" type=file name=file>
+        <input class="upload" type=submit value=Upload>
+        <a class="logout" href="/logout">Выйти</a>
+      </form>
+    </div>
+
+    <div style="clear:both"></div>
+  </div><!-- Панель управления -->
+
+    <h2>FILES</h2>
+{% endblock %}
+
+{% block footer %}
+  </div>
+{% endblock %}
