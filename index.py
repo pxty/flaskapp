@@ -22,7 +22,7 @@ if os.path.exists(dotenv_path):
 
 
 app.config['SECRET_KEY'] = os.environ.get('SECRET_KEY')
-UPLOAD_FOLDER = os.getcwd() + os.environ.get('UPLOAD_FOLDER')
+UPLOAD_FOLDER = str(os.getcwd()) + str(os.environ.get('UPLOAD_FOLDER'))
 ALLOWED_KEYS = os.environ.get("ALLOWED_KEYS").split("|")
 ALLOWED_EXTENSIONS = os.environ.get("ALLOWED_EXTENSIONS").split("|")
 app.permanent_session_lifetime = timedelta(seconds=12)
