@@ -18,6 +18,7 @@ PS: Если сразу не взлетит, то возможно, в Dockerfil
 COPY ./requirements.txt /requirements.txt 
 
 ===================================
+
 git clone https://github.com/pxty/flaskapp.git
 
 sudo docker build -t flaskapp:latest .
