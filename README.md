@@ -13,4 +13,6 @@ UPLOAD_FOLDER=/files
 ALLOWED_EXTENSIONS = txt|pdf|png|jpg|jpeg|gif|csv
 
 
-PS: Если сразу не взлетит, то возможно, в Dockerfile надо править пути тут COPY ./requirements.txt /requirements.txt 
+PS: Если сразу не взлетит, то возможно, в Dockerfile надо править пути тут:
+
+COPY ./requirements.txt /requirements.txt 
