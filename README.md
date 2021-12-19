@@ -13,10 +13,6 @@ UPLOAD_FOLDER=/files
 ALLOWED_EXTENSIONS = txt|pdf|png|jpg|jpeg|gif|csv
 
 
-PS: Если сразу не взлетит, то возможно, в Dockerfile надо править пути тут:
-
-COPY ./requirements.txt /requirements.txt 
-
 ===================================
 
 git clone https://github.com/pxty/flaskapp.git
@@ -30,3 +26,9 @@ sudo docker login -u "DockerID" -p "password" docker.io  # от докерхаб
 sudo docker push pxty/flaskapp  # репозиторий на докерхабе создан заранее!!!
 
 sudo sudo docker run --name flaskapp -d -p 5000:5000 --mount type=bind,source=/home/username/files,target=/files flaskapp
+
+===================================
+
+PS: Если сразу не взлетит, то возможно, в Dockerfile надо править пути тут:
+
+COPY ./requirements.txt /requirements.txt 
